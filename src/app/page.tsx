@@ -28,7 +28,6 @@ export default function Home() {
   const [city, setCity] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [cities, setCities] = useState<DataItem[]>([]);
   const [notFound, setNotFound] = useState(false);
 
   // Fetch cities data on component mount
@@ -47,8 +46,6 @@ export default function Home() {
             name: res.name,
           })
         );
-        setCities(newCities);
-        console.log("Cities loaded:", newCities);
       })
       .catch((error) => {
         console.error("Error fetching cities data:", error);
