@@ -46,6 +46,7 @@ export default function Home() {
             name: res.name,
           })
         );
+        console.log(newCities);
       })
       .catch((error) => {
         console.error("Error fetching cities data:", error);
